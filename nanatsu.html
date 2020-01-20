@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>ZONA ANIME </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css.css" />
+
+    <script type="text/javascript" src="jquery-1.2.3.min.js"></script>
+    <style type="text/css">
+        #result {
+            background-color: #F0FFED;
+            border: 1px solid #215800;
+            padding: 10px;
+            width: 400px;
+            margin-bottom: 20px;
+        }
+
+        @media screen and (max-width: 900px) {
+            #result {
+                width: 250px;
+            }
+        }
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $().ajaxStart(function () {
+                $('#loading').show();
+                $('#result').hide();
+            }).ajaxStop(function () {
+                $('#loading').hide();
+                $('#result').fadeIn('slow');
+            });
+
+            $('#formKomentar').submit(function () {
+                $.ajax({
+                    type: 'POST',
+                    url: $(this).attr('action'),
+                    data: $(this).serialize(),
+                    success: function (data) {
+                        $('#result').html(data);
+                    }
+                })
+                return false;
+            });
+        })
+    </script>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+            <img src="images/header.png" class="gambar1" style="margin-top: 20px;">
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <li><img class="gambar2" src="images/LOGO.png" align="left" width="200" length="140"
+                                style="padding-top: 14px;">
+                        </li>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbar">
+                        <ul class="nav navbar-nav">
+                            <ul>
+                                <li><a href="index.html" class="current">BERANDA</a></li>
+                                <li><a href="da.html">DAFTAR ANIME</a></li>
+                                <li><a href="jadwal.html">JADWAL</a></li>
+                                <li><a href="tentang.html">TENTANG</a></li>
+                                <li><a href="dp.html">REQUEST</a></li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+    <div class="row content">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+            <div class=" row" style="background-color: #fff; margin-left: auto; margin-right: auto;">
+                <div class="col-sm-9 text-left" style="border-right: 1px solid #eeeeee; ">
+                    <div class="row row_anime">
+                        <article>
+                            <figure style="margin-bottom: 50px;">
+                                <img src="images/nanatsu.jpg" alt="pecel" style="width: 100%; height: 90%;" />
+                                <figcaption>
+                                    <center><strong>NANATSU NO TAIZAI</strong></center>
+                                </figcaption>
+                            </figure>
+                            <hgroup>
+                                <h2><a href="nanatsu.html">NANATSU NO TAIZAI S3 EPS. 2</a></h2>
+                                <h3> Action, Adventure, Fantasy, Magic, Shounen, Supernatural</h3>
+                            </hgroup>
+                            <p>Nanatsu no Taizai: Kamigami no Gekirin Season 3 merupakan lanjutan dari season
+                                sebelumnya. Di mana
+                                Meliodas telah bangkit kembali setelah dibunuh oleh Estarossa. Dan kebangkitannya
+                                tersebut juga
+                                menjadi kemenangan baru Tujuh Dosa Besar melawan klan iblis.</p>
+                        </article>
+                    </div>
+
+
+                    <h2><strong>INFORMASI</strong></h2>
+
+                    <center>
+                        <table width="500" height="300" class="table table-hover">
+                            <tbody>
+                                <tr>
+                                    <td>Japanese</td>
+                                    <td>:</td>
+                                    <td>ワンピース</td>
+                                </tr>
+                                <tr>
+                                    <td>Type</td>
+                                    <td>:</td>
+                                    <td>TV</td>
+                                </tr>
+                                <tr>
+                                    <td>Status</td>
+                                    <td>:</td>
+                                    <td>Ongoing</td>
+                                </tr>
+                                <tr>
+                                    <td>Season</td>
+                                    <td>:</td>
+                                    <td>Fall 1999</td>
+                                </tr>
+                                <tr>
+                                    <td>Aired</td>
+                                    <td>:</td>
+                                    <td>Oct 20, 1999 to ? </td>
+                                </tr>
+                                <tr>
+                                    <td>Producers;</td>
+                                    <td>:</td>
+                                    <td>Fuji TV, TAP,</td>
+                                </tr>
+                                <tr>
+                                    <td>Genres</td>
+                                    <td>:</td>
+                                    <td>Action, Adventure, Comedy, Drama, Fantasy, Shounen, Super Power</td>
+                                </tr>
+                                <tr>
+                                    <td>Duration: </td>
+                                    <td>:</td>
+                                    <td>24 min. per ep.</td>
+                                </tr>
+                                <tr>
+                                    <td>Score: </td>
+                                    <td>:</td>
+                                    <td>8.56</td>
+                                </tr>
+                                <tr>
+                                    <td>Credit: </td>
+                                    <td>:</td>
+                                    <td>ZONA ANIME</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </center>
+
+                    <h2><strong>Sinopsis : </strong></h2>
+                    <br>
+                    <center>
+                        <table width="600" height="100" class="table table-hover">
+                            <tbody>
+                                <tr>
+                                    <td>Nanatsu no Taizai: Kamigami no Gekirin Season 3 merupakan lanjutan dari season
+                                        sebelumnya. Di mana Meliodas telah bangkit kembali setelah dibunuh oleh
+                                        Estarossa. Dan kebangkitannya tersebut juga menjadi kemenangan baru Tujuh Dosa
+                                        Besar melawan klan iblis. Salah satu dari Sepuluh Perintah Tuhan, Fraudrin telah
+                                        dikalahkan. Dan Ksatria Suci Agung selanjutnya pun telah dipilih. Namun
+                                        kedamaian takkan bertahan lama, lambat laun klan iblis dipastikan akan menyerang
+                                        kembali. Sementara itu, Diane dan King belum mengetahui tentang kebangkitan
+                                        Meliodas, dan mengira Komandan mereka tewas dibunuh oleh Sepuluh Perintah Tuhan.
+                                        Diane dan King kembali ke Hutan Raja Peri untuk berlindung dari serangan Iblis.
+                                        Namun di saat kedamaian telah mereka dapatkan. Tiba-tiba mereka berdua mengalami
+                                        fenomena aneh di mana mereka bertemu kembali dengan Raja Peri Pertama, Gloxinia
+                                        dan sang Raja Raksasa Drole. Apakah yang akan terjadi pada mereka?</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </center>
+                    <h2><strong>Note :</strong></h2>
+                    <br>
+                    <center>
+                        <table width="600" height="300" class="table table-hover">
+                            <tbody>
+                                <tr>
+                                    <td>1. Link GDrive sewaktu-waktu dapat terjadi limit, akun kami kena suspend atau
+                                        dihapus sama google sehingga terjadi error, jadi jika menemui error dan tetap
+                                        ingin download melalui server google silahkan pilih link KuroCloud, KuroDrive
+                                        atau buka link Mirror jika ada(kemudian pilih Google Drive).</td>
+                                </tr>
+                                <tr>
+                                    <td>2. Khusus link KuroDrive harap menggunakan akun fresh Google Drive untuk login
+                                        (masih ada storage sejumlah file yg didownload) dan bukan login akun kedua,
+                                        ketiga dst. Maksudnya jika sebelumnya kamu pernah login akun gmail lain harus
+                                        kamu logout dulu kemudian login kembali pakai akun fresh tersebut jika tidak
+                                        pasti akan terjadi error.</td>
+                                </tr>
+                                <tr>
+                                    <td>3. Link KuroDrive ini bukan bertujuan memberatkan kamu yang ingin download tapi
+                                        kami berusaha menjaga agar link nya ga kena razia sehingga link nya tetap bisa
+                                        kamu gunakan kapan saja.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </center>
+                    <div class="container">
+                        <div class="row" style="margin-left: 20px; margin-top: 75px;">
+                            <iframe class="embed_video"
+                                src="https://drive.google.com/file/d/18AWVWjJnHqaKHQAx2Gj0bNtYg3T-6Tnj/preview"
+                                width="600" height="300"></iframe>
+                        </div>
+                    </div>
+
+                    <h2><strong>Link Download Video</strong></h2>
+                    <br>
+                    <center>
+                        <table width="500" height="300" class="table table-hover">
+                            <tbody>
+                                <tr>
+                                    <td>HD 1080P</td>
+                                    <td>:</td>
+                                    <td><a href="https://drive.google.com/file/d/18AWVWjJnHqaKHQAx2Gj0bNtYg3T-6Tnj">Google
+                                            Drive</a></td>
+                                    <td><a
+                                            href="https://drive.google.com/file/d/18AWVWjJnHqaKHQAx2Gj0bNtYg3T-6Tnj">Zippyshare</a>
+                                    </td>
+                                    <td><a
+                                            href="https://drive.google.com/file/d/18AWVWjJnHqaKHQAx2Gj0bNtYg3T-6Tnj">Mega</a>
+                                    </td>
+                                    <td><a
+                                            href="https://drive.google.com/file/d/18AWVWjJnHqaKHQAx2Gj0bNtYg3T-6Tnj">Tusfiles</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>HD 720P</td>
+                                    <td>:</td>
+                                    <td><a href="https://drive.google.com/file/d/18AWVWjJnHqaKHQAx2Gj0bNtYg3T-6Tnj">Google
+                                            Drive</a></td>
+                                    <td><a
+                                            href="https://drive.google.com/file/d/18AWVWjJnHqaKHQAx2Gj0bNtYg3T-6Tnj">Zippyshare</a>
+                                    </td>
+                                    <td><a
+                                            href="https://drive.google.com/file/d/18AWVWjJnHqaKHQAx2Gj0bNtYg3T-6Tnj">Mega</a>
+                                    </td>
+                                    <td><a
+                                            href="https://drive.google.com/file/d/18AWVWjJnHqaKHQAx2Gj0bNtYg3T-6Tnj">Tusfiles</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>HD 480P</td>
+                                    <td>:</td>
+                                    <td><a href="https://drive.google.com/file/d/18AWVWjJnHqaKHQAx2Gj0bNtYg3T-6Tnj">Google
+                                            Drive</a></td>
+                                    <td><a
+                                            href="https://drive.google.com/file/d/18AWVWjJnHqaKHQAx2Gj0bNtYg3T-6Tnj">Zippyshare</a>
+                                    </td>
+                                    <td><a
+                                            href="https://drive.google.com/file/d/18AWVWjJnHqaKHQAx2Gj0bNtYg3T-6Tnj">Mega</a>
+                                    </td>
+                                    <td><a
+                                            href="https://drive.google.com/file/d/18AWVWjJnHqaKHQAx2Gj0bNtYg3T-6Tnj">Tusfiles</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>HD 360P</td>
+                                    <td>:</td>
+                                    <td><a href="https://drive.google.com/file/d/18AWVWjJnHqaKHQAx2Gj0bNtYg3T-6Tnj">Google
+                                            Drive</a></td>
+                                    <td><a
+                                            href="https://drive.google.com/file/d/18AWVWjJnHqaKHQAx2Gj0bNtYg3T-6Tnj">Zippyshare</a>
+                                    </td>
+                                    <td><a
+                                            href="https://drive.google.com/file/d/18AWVWjJnHqaKHQAx2Gj0bNtYg3T-6Tnj">Mega</a>
+                                    </td>
+                                    <td><a
+                                            href="https://drive.google.com/file/d/18AWVWjJnHqaKHQAx2Gj0bNtYg3T-6Tnj">Tusfiles</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </center>
+
+                    <h2><strong>Berikan Komentar</strong></h2>
+                    <br>
+                    <center>
+                        <form id="formKomentar" action="proses1.php" method="POST">
+                            <div>
+                                <input type="text" size="27" name="nama" placeholder="Nama" />
+                            </div>
+
+                            <div>
+                                <input type="text" size="27" name="email" placeholder="Email" />
+                            </div>
+
+
+                            <div>
+                                <textarea name="komentar" rows="10" placeholder="Komentar"></textarea>
+                            </div>
+
+                            <div>
+                                <input type="submit" value="Tambahkan Komentar" />
+                            </div>
+                        </form>
+                        <div id="loading" style="display:none;"><img src="loading.gif" alt="loading..." /></div>
+                        <div id="result" style="display:none;"></div>
+                    </center>
+
+
+
+                </div>
+                <div class="col-sm-3 sidenav">
+                    <aside>
+                        <section class="popular-recipes" style="margin-bottom: 200px;">
+                            <h3>ANIME POPULER</h3>
+                            <a href="op.html">ONE PIECE</a>
+                            <a href="nanatsu.html">NANATSU NO TAIZAI</a>
+                            <a href="bnha.html">BOKU NO HERO ACADEMIA</a>
+                            <a href="bc.html">BLACK CLOVER</a>
+                        </section>
+                        <section class="contact-details">
+                            <h3>KONTAK</h3>
+                            <a href="tentang.html">Klik Disini</a>
+                        </section>
+                    </aside>
+                </div>
+            </div>
+
+            <div class="row_footer">
+                &copy; 2019 EKINIME
+            </div>
+
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+
+</body>
+
+</html>

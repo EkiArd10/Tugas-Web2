@@ -1,0 +1,416 @@
+       
+        .icon_sosmed{
+            height: 50px;
+            width: 50px;
+            margin: 20px;
+        }
+        marquee{
+            padding-top: 20px;
+            height: 70px;
+        }
+       
+       .request_tentang {
+            margin-left:0;
+        }
+        #customerss td{
+            font-size: 20px;
+        }
+        
+        /*#customers td.shrink {*/
+        /*  white-space: nowrap*/
+        /*}*/
+        
+        /*#customers td.expand {*/
+        /*  width: 99%*/
+        /*}*/
+        
+        #customers td{
+            font-size: 15px;
+        }
+        #customers th{
+            font-size: 17px;
+        }
+        #customers {
+            width: 96%;
+        }
+        
+        
+        
+        .table-hover{
+            margin-left: 20px;
+        }
+			input, textarea{
+                padding: 10px;
+                border:3px solid #e6e6e6;
+                border-radius: 5px;
+                margin-bottom: 15px;}
+           input:focus, textarea:focus{
+               border:3px solid #5E4F4F;}
+           textarea{
+               width:300px;}
+           input[type="submit"]{
+                cursor: pointer;
+                background: -webkit-linear-gradient(top, #efefef, #ddd);
+                background: -moz-linear-gradient(top, #efefef, #ddd);
+                background: -ms-linear-gradient(top, #efefef, #ddd);
+                background: -o-linear-gradient(top, #efefef, #ddd);
+                background: linear-gradient(top, #efefef, #ddd);
+                color: #333;
+                text-shadow: 0px 1px 1px rgba(255,255,255,1);
+                border: 1px solid #ccc;}
+           input[type="submit"]:hover {
+                background: -webkit-linear-gradient(top, #eee, #ccc);
+                background: -moz-linear-gradient(top, #eee, #ccc);
+                background: -ms-linear-gradient(top, #eee, #ccc);
+                background: -o-linear-gradient(top, #eee, #ccc);
+                background: linear-gradient(top, #eee, #ccc);
+                border: 1px solid #bbb;}
+			#formKomentar{
+                margin-bottom: 20px;
+				border: 5px solid #d1d1d1;
+				width:500px;
+				padding:10px;}
+				.form-style-1 {
+					margin:10px auto;
+					max-width: 400px;
+					padding: 20px 12px 10px 20px;
+					font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+				}
+				.form-style-1 li {
+					padding: 0;
+					display: block;
+					list-style: none;
+					margin: 10px 0 0 0;
+				}
+				.form-style-1 label{
+					margin:0 0 3px 0;
+					padding:0px;
+					display:block;
+					font-weight: bold;
+				}
+				.form-style-1 input[type=text],
+				.form-style-1 input[type=password],
+				.form-style-1 input[type=date],
+				.form-style-1 input[type=datetime],
+				.form-style-1 input[type=number],
+				.form-style-1 input[type=search],
+				.form-style-1 input[type=time],
+				.form-style-1 input[type=url],
+				.form-style-1 input[type=email],
+				textarea, 
+				select{
+					box-sizing: border-box;
+					webkit-box-sizing: border-box;
+					moz-box-sizing: border-box;
+					border:1px solid #BEBEBE;
+					padding: 7px;
+					margin:0px;
+					webkit-transition: all 0.30s ease-in-out;
+					moz-transition: all 0.30s ease-in-out;
+					ms-transition: all 0.30s ease-in-out;
+					o-transition: all 0.30s ease-in-out;
+					outline: none;	
+				}
+				.form-style-1 input[type=text]:focus,
+				.form-style-1 input[type=password]:focus,
+				.form-style-1 input[type=date]:focus,
+				.form-style-1 input[type=datetime]:focus,
+				.form-style-1 input[type=number]:focus,
+				.form-style-1 input[type=search]:focus,
+				.form-style-1 input[type=time]:focus,
+				.form-style-1 input[type=url]:focus,
+				.form-style-1 input[type=email]:focus,
+				.form-style-1 textarea:focus, 
+				.form-style-1 select:focus{
+					-moz-box-shadow: 0 0 8px #88D5E9;
+					-webkit-box-shadow: 0 0 8px #88D5E9;
+					box-shadow: 0 0 8px #88D5E9;
+					border: 1px solid #88D5E9;
+				}
+				.form-style-1 .field-divided{
+					width: 49%;
+				}
+
+				.form-style-1 .field-long{
+					width: 100%;
+				}
+				.form-style-1 .field-select{
+					width: 100%;
+				}
+				.form-style-1 .field-textarea{
+					height: 100px;
+				}
+				.form-style-1 input[type=submit], .form-style-1 input[type=button]{
+					background: #4B99AD;
+					padding: 8px 15px 8px 15px;
+					border: none;
+					color: #fff;
+				}
+				.form-style-1 input[type=submit]:hover, .form-style-1 input[type=button]:hover{
+					background: #4691A4;
+					box-shadow:none;
+					moz-box-shadow:none;
+					webkit-box-shadow:none;
+				}
+				.form-style-1 .required{
+					color:red;
+				}       
+       
+       .row_anime{
+            margin-bottom: 30px;
+        }
+        .row_halaman {
+            background-color: #fff;
+            margin-left: auto;
+            margin-right: auto;
+            padding-bottom: 10px;
+            padding-top: 10px;
+        }
+
+        .row_footer {
+
+            margin-right: 0;
+            margin-left: 0;
+            padding-left: 20px;
+            height: 30px;
+            color: #fff;
+            background-color: #aeaca8;
+            margin-bottom: 30px;
+        }
+
+        aside h3 {
+            color: #de6581;
+            text-align: left;
+        }
+
+        section.courses {
+            float: left;
+            width: 659px;
+            border-right: 1px solid #eeeeee;
+        }
+
+        aside {
+            width: 100%;
+        }
+
+        aside section a {
+            display: block;
+            float: left;
+            width: 100%;
+            text-align: left;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eeeeee;
+        }
+
+        aside section a:hover {
+            color: #985d6a;
+            background-color: #efefef;
+        }
+
+        a {
+            color: #de6581;
+            text-decoration: none;
+        }
+
+        body {
+            color: #000000;
+            background-color: #f9f8f6;
+            background-image: url("images/bg.jpg");
+            background-position: center;
+            font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            /* Tambahkan baris berikut */
+            margin: 0px;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        p {
+            margin-right: 20px;
+        }
+
+        /* Remove the navbar's default margin-bottom and rounded borders */
+        .navbar {
+            border-color: #333;
+            border-radius: 0;
+            margin-bottom: 0;
+            background: #333;
+        }
+
+        /* Set black background color, white text and some padding */
+        footer {
+            background-color: #555;
+            color: white;
+            padding: 15px;
+        }
+
+        .gambar1 {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Navbar */
+        #navbar {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            color: #fff;
+            overflow: auto;
+        }
+
+        #navbar a {
+            color: #fff;
+        }
+
+        #navbar .logo {
+            float: left;
+            padding-top: 20px;
+        }
+
+        #navbar ul {
+            list-style: none;
+            float: right;
+        }
+
+        #navbar ul li {
+            float: left;
+        }
+
+        #navbar ul li a {
+            display: block;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #navbar ul li a:hover,
+        #navbar ul li a.current {
+            background: #444;
+            color: #f7c08a;
+        }
+
+        figure {
+            margin-bottom: 20px;
+            margin-left: 20px;
+            margin-right: 20px;
+            float: left;
+            width: 290px;
+            height: 220px;
+            padding: 5px;
+            border: 2px solid #eeeeee;
+        }
+
+        figcaption {
+            font-size: 90%;
+            text-align: left;
+        }
+        
+            .row h2{
+                margin-left: 20px;
+            }
+        
+            .request_tentang h2{
+                margin-left: 0;
+            }
+        
+        @media screen and (max-width: 1500px){
+            .gambar_tentang {
+                width: 100%;}
+            
+            
+        }
+        
+        /* saat ukuran web mengecil contoh ada di hp */
+        @media screen and (max-width: 900px) {
+            marquee{
+            padding-top: 10px;
+            height: 100%;
+            }
+            html, body {
+              overflow-x: hidden;
+            }
+            body {
+              position: relative
+            }
+           .row_anime {
+                margin-left: -20px;
+            }
+            .table-hover{
+                width: 450px;
+                margin-left: 0;
+            }
+            
+            #formkomentar{
+                width: 450px;
+            }
+            
+            hgroup h2{
+                margin-left: 0;
+            }
+            .row h2{
+                margin-left: 0;
+            }
+            .row article{
+                margin-left: 20px;
+            }
+            
+            /*#customer{ */
+            /*    margin-left: -20px;*/
+            /*}*/
+            #customers td{
+                font-size: 9px;
+            }
+            #customers th{
+                font-size: 10px;
+            }
+            #customerss td{
+                font-size: 17px;
+            }
+            #formKomentar{
+                width: auto;
+            }
+            .embed_video{
+                width: 300px;
+                height: 180px;
+            }
+            .sidenav {
+                height: auto;
+                padding: 15px;
+                padding-bottom: 70px;
+            }
+
+            .row.content {
+                height: auto;
+
+            }
+
+            .gambar1 {
+                width: 100%;
+                height: auto;
+            }
+
+            .gambar2 {
+                width: 150px;
+                margin-left: 10px;
+                margin-top: -8px;
+            }
+
+            #navbar ul li a {
+                font-size: 10px;
+                margin-right: 5px;
+                display: block;
+                padding: 10px;
+                text-align: center;
+            }
+
+            figcaption {
+                font-size: 90%;
+            text-align: left;
+            }
+
+            figure {
+                margin-right: 100px;
+            }
+        }
+        

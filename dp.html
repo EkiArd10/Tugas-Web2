@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>EKINIME </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css.css" />
+    <script type="text/javascript" src="jquery-1.2.3.min.js"></script>
+    <style type="text/css">
+        body,
+        table,
+        input,
+        select,
+        textarea {
+            font: 11px/20px Verdana, sans-serif;
+        }
+
+        h4 {
+            font-size: 18px;
+        }
+
+        input {
+            padding: 3px;
+            border: 1px solid #999;
+        }
+
+        td {
+            padding: 5px;
+        }
+
+        #result,
+        #result2 {
+            background-color: #F0FFED;
+            border: 1px solid #215800;
+            padding: 10px;
+            width: 400px;
+            margin-bottom: 20px;
+        }
+
+        @media screen and (max-width: 900px) {
+
+            #result,
+            #result2 {
+                width: 250px;
+            }
+        }
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $().ajaxStart(function () {
+                $('#loading').show();
+                $('#result').hide();
+            }).ajaxStop(function () {
+                $('#loading').hide();
+                $('#result').fadeIn('slow');
+            });
+
+            $().ajaxStart(function () {
+                $('#loading2').show();
+                $('#result2').hide();
+            }).ajaxStop(function () {
+                $('#loading2').hide();
+                $('#result2').fadeIn('slow');
+            });
+
+            $('#myForm1').submit(function () {
+                $.ajax({
+                    type: 'POST',
+                    url: $(this).attr('action'),
+                    data: $(this).serialize(),
+                    success: function (data) {
+                        $('#result').html(data);
+                    }
+                })
+                return false;
+            });
+
+            $('#myForm2').submit(function () {
+                $.ajax({
+                    type: 'POST',
+                    url: $(this).attr('action'),
+                    data: $(this).serialize(),
+                    success: function (data) {
+                        $('#result2').html(data);
+                    }
+                })
+                return false;
+            });
+        })
+    </script>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+            <img src="images/header.png" class="gambar1" style="margin-top: 20px;">
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <li><img class="gambar2" src="images/LOGO.png" align="left" width="200" length="140"
+                                style="padding-top: 14px;">
+                        </li>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbar">
+                        <ul class="nav navbar-nav">
+                            <ul>
+                                <li><a href="index.html" class="current">BERANDA</a></li>
+                                <li><a href="da.html">DAFTAR ANIME</a></li>
+                                <li><a href="jadwal.html">JADWAL</a></li>
+                                <li><a href="tentang.html">TENTANG</a></li>
+                                <li><a href="dp.html">REQUEST</a></li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+    <div class="row content">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+            <div class=" row" style="background-color: #fff; margin-left: auto; margin-right: auto;">
+                <div class="col-sm-9 text-left" style="border-right: 1px solid #eeeeee; ">
+                    <div class="row_anime" style="margin-top: 10px;">
+                        <article>
+                            <br>
+                            <strong>
+                                <blink>
+                                    <marquee>
+                                        <font face="akrobat" color="black" size="6">REQUEST ANIME HD SUBTITLE
+                                            INDONESIA
+                                        </font>
+                                    </marquee>
+                                </blink>
+                            </strong><br>
+                            <br>
+                            <center><img src="images/1.png" width="500" height="300" class="gambar_tentang"></center>
+                            <br>
+                            <div class="request_tentang">
+                                <h3><strong>Ingin request anime HD?
+                                        Disinilah tempatnya!</strong></h3>
+                                <p>Yang ingin request Anime HD
+                                    langsung saja mengisi form dibawah ini.</p>
+                                <p>Syarat untuk request anime
+                                    batch:<br> 1. Komentar dibawah
+                                    ini.
+                                    <br> 2. Tulislah Judul yang benar.
+                                    <br> 3. Anime yang sudah tamat
+                                    atau selesai tayang.
+                                    <br> 4. Jika perlu sertakan juga
+                                    fansub terpercaya kalian.
+                                    <br> 5. Doakan semoga request’an
+                                    kamu cepat selesai. amin</p><br>
+
+                                <form method="POST" action="proses.php" id="myForm1" style="margin-top: -20px;">
+                                    <ul class="form-style-1">
+                                        <li><label>NAMA LENGKAP <span class="required">*</span></label>
+                                            <input type="text" name="nama_depan" class="field-divided"
+                                                placeholder="Depan" />
+                                            <input type="text" name="nama_belakang" class="field-divided"
+                                                placeholder="Belakang" />
+                                        </li>
+                                        <li>
+                                            <label>EMAIL <span class="required">*</span></label>
+                                            <input type="text" name="email" class="field-long" />
+                                        </li>
+                                        <li>
+                                            <label>MASUKKAN PASSWORD<span class="required">*</span></label>
+                                            <input type="password" name="password" class="field-long" />
+                                        </li>
+                                        <li>
+                                            <label>ULANGI PASSWORD<span class="required">*</span></label>
+                                            <input type="password" name="password2" class="field-long" />
+                                        </li>
+                                        <li>
+                                            <label>KUALITAS</label>
+                                            <select name="kualitas" class="field-select">
+                                                <option value="1">HD 1080P</option>
+                                                <option value="2">720P</option>
+                                                <option value="3">480P</option>
+                                                <option value="4">360P</option>
+                                                <option value="5">240P</option>
+                                                <option value="6">144P</option>
+                                            </select>
+                                        </li>
+                                        <li>
+                                            <label>MASUKKAN JUDUL SESUAI SYARAT DIATAS <span
+                                                    class="required">*</span></label>
+                                            <textarea name="judul" id="judul"
+                                                class="field-long field-textarea"></textarea>
+                                        </li>
+                                        <li>
+                                            <input type="submit" value="Submit" />
+                                        </li>
+                                    </ul>
+                                </form>
+                                <center>
+                                    <div id="loading" style="display:none;"><img src="loading.gif" alt="loading..." />
+                                    </div>
+                                    <div id="result" style="display:none;"></div>
+                                </center>
+
+                                <h2><strong>Lapor Link Download Bermasalah</strong></h2>
+                                <p>Laporkan juga link download google
+                                    drive error/bermasalah jika kalian menemukannya.
+                                    Mohon bantu laporkan disini dengan
+                                    cara berkomentar dibawah ini.<br>
+                                    Terima kasih atas laporannya.</p>
+                            </div>
+
+                            <form method="POST" action="proses3.php" id="myForm2">
+                                <ul class="form-style-1">
+                                    <li><label>NAMA LENGKAP <span class="required">*</span></label>
+                                        <input type="text" name="nama_depan" class="field-divided"
+                                            placeholder="Depan" />
+                                        <input type="text" name="nama_belakang" class="field-divided"
+                                            placeholder="Belakang" />
+                                    </li>
+                                    <li>
+                                        <label>EMAIL <span class="required">*</span></label>
+                                        <input type="text" name="email" class="field-long" />
+                                    </li>
+                                    <li>
+                                        <label>MASUKKAN PASSWORD<span class="required">*</span></label>
+                                        <input type="password" name="password" class="field-long" />
+                                    </li>
+                                    <li>
+                                        <label>ULANGI PASSWORD<span class="required">*</span></label>
+                                        <input type="password" name="password2" class="field-long" />
+                                    </li>
+                                    <li>
+                                        <label>LAPORKAN LINK YANG BERMASALAH<span class="required">*</span></label>
+                                        <input type="text" name="link_masalah" class="field-long"
+                                            placeholder="http://www.link-bermasalah.com" />
+                                    </li>
+                                    <li>
+                                        <input type="submit" value="Submit" />
+                                    </li>
+                                </ul>
+                            </form>
+                            <center>
+                                <div id="loading2" style="display:none;"><img src="loading.gif" alt="loading..." />
+                                </div>
+                                <div id="result2" style="display:none;"></div>
+                            </center>
+                        </article>
+                    </div>
+                </div>
+                <div class="col-sm-3 sidenav">
+                    <aside>
+                        <section class="popular-recipes" style="margin-bottom: 200px;">
+                            <h3>ANIME POPULER</h3>
+                            <a href="op.html">ONE PIECE</a>
+                            <a href="nanatsu.html">NANATSU NO TAIZAI</a>
+                            <a href="bnha.html">BOKU NO HERO ACADEMIA</a>
+                            <a href="bc.html">BLACK CLOVER</a>
+                        </section>
+                        <section class="contact-details">
+                            <h3>KONTAK</h3>
+                            <a href="tentang.html">Klik Disini</a>
+                        </section>
+                    </aside>
+                </div>
+            </div>
+            <div class="row_footer">
+                &copy; 2019 EKINIME
+            </div>
+
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+
+</body>
+
+</html>
